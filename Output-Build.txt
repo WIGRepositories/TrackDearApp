@@ -1,0 +1,14 @@
+﻿1>------ Build started: Project: TrackDearApp, Configuration: Debug Any CPU ------
+1>CSC : warning CS2002: Source file 'obj\Debug\\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs' specified multiple times
+1>CSC : warning CS2002: Source file 'obj\Debug\\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs' specified multiple times
+1>CSC : warning CS2002: Source file 'obj\Debug\\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs' specified multiple times
+1>D:\jagan\Jagan Tracking Requirements\TrackDear\TrackDearApp\TrackDearApp\Controllers\AddUsersController.cs(134,34,134,36): warning CS0168: The variable 'ex' is declared but never used
+1>D:\jagan\Jagan Tracking Requirements\TrackDear\TrackDearApp\TrackDearApp\Controllers\AddUsersController.cs(211,34,211,36): warning CS0168: The variable 'ex' is declared but never used
+1>D:\jagan\Jagan Tracking Requirements\TrackDear\TrackDearApp\TrackDearApp\Controllers\ForgotPasswordController.cs(112,34,112,36): warning CS0168: The variable 'ex' is declared but never used
+1>D:\jagan\Jagan Tracking Requirements\TrackDear\TrackDearApp\TrackDearApp\Controllers\RegisterUser1Controller.cs(144,34,144,36): warning CS0168: The variable 'ex' is declared but never used
+1>D:\jagan\Jagan Tracking Requirements\TrackDear\TrackDearApp\TrackDearApp\Controllers\RegisterUser1Controller.cs(221,34,221,36): warning CS0168: The variable 'ex' is declared but never used
+1>D:\jagan\Jagan Tracking Requirements\TrackDear\TrackDearApp\TrackDearApp\Controllers\RegisterUserController.cs(148,34,148,36): warning CS0168: The variable 'ex' is declared but never used
+1>D:\jagan\Jagan Tracking Requirements\TrackDear\TrackDearApp\TrackDearApp\Controllers\RegisterUserController.cs(225,34,225,36): warning CS0168: The variable 'ex' is declared but never used
+1>D:\jagan\Jagan Tracking Requirements\TrackDear\TrackDearApp\TrackDearApp\Controllers\RegisterUserController.cs(406,34,406,36): warning CS0168: The variable 'ex' is declared but never used
+1>  TrackDearApp -> D:\jagan\Jagan Tracking Requirements\TrackDear\TrackDearApp\TrackDearApp\bin\TrackDearApp.dll
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
