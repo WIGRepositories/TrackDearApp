@@ -65,6 +65,9 @@ namespace TrackDearApp
         public string AltPhonenumber { get; set; }
         public string Altemail { get; set; }
         public string AccountNo { get; set; }
+
+        public string FCMId { get; set; }
+        public string GroupId { get; set; }
         public string NewPassword { get; set; }
         public object Mobileotp { get; set; }
 

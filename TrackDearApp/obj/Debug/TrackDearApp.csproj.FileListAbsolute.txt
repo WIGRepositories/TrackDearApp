@@ -1,0 +1,14 @@
+D:\Projects\TrackDearApp\TrackDearApp\bin\TrackDearApp.dll.config
+D:\Projects\TrackDearApp\TrackDearApp\bin\TrackDearApp.dll
+D:\Projects\TrackDearApp\TrackDearApp\bin\TrackDearApp.pdb
+D:\Projects\TrackDearApp\TrackDearApp\bin\Newtonsoft.Json.dll
+D:\Projects\TrackDearApp\TrackDearApp\bin\System.Net.Http.Formatting.dll
+D:\Projects\TrackDearApp\TrackDearApp\bin\System.Web.Http.dll
+D:\Projects\TrackDearApp\TrackDearApp\bin\System.Web.Http.WebHost.dll
+D:\Projects\TrackDearApp\TrackDearApp\bin\Newtonsoft.Json.xml
+D:\Projects\TrackDearApp\TrackDearApp\bin\System.Net.Http.Formatting.xml
+D:\Projects\TrackDearApp\TrackDearApp\bin\System.Web.Http.xml
+D:\Projects\TrackDearApp\TrackDearApp\bin\System.Web.Http.WebHost.xml
+D:\Projects\TrackDearApp\TrackDearApp\obj\Debug\TrackDearApp.dll
+D:\Projects\TrackDearApp\TrackDearApp\obj\Debug\TrackDearApp.pdb
+D:\Projects\TrackDearApp\TrackDearApp\obj\Debug\TrackDearApp.csprojResolveAssemblyReference.cache

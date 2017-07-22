@@ -102,9 +102,9 @@ namespace TrackDearApp.Controllers
             Lng.Value = l.longitude;
             cmd.Parameters.Add(Lng);
 
-            SqlParameter flag = new SqlParameter("@flag", SqlDbType.VarChar);
-            flag.Value = l.flag;
-            cmd.Parameters.Add(flag);
+            //SqlParameter flag = new SqlParameter("@flag", SqlDbType.VarChar);
+            //flag.Value = l.flag;
+            //cmd.Parameters.Add(flag);
 
             //DataTable dt = new DataTable();
             //SqlDataAdapter da = new SqlDataAdapter(cmd);

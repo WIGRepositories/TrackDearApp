@@ -14,11 +14,181 @@ namespace TrackDear.Controllers
 {
     public class UserAccountController : ApiController
     {
+
+        //New GroupId Sheshu Updated Start
+        [HttpPost]
+        [Route("api/UserAccount/RegisterUserForNewGroupId")]
+        public DataTable RegisterUserForNewGroupId(UserAccount ocr)
+        {
+
+            SqlConnection conn = new SqlConnection();
+
+            conn.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["TDA"].ToString();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "InsUpdAppusers_For_New_GroupId";
+
+            cmd.Connection = conn;
+
+            SqlParameter f = new SqlParameter("@flag", SqlDbType.VarChar);
+            f.Value = ocr.flag;
+            cmd.Parameters.Add(f);
+
+            SqlParameter c = new SqlParameter("@Username", SqlDbType.VarChar, 20);
+            c.Value = ocr.Username;
+            cmd.Parameters.Add(c);
+
+            SqlParameter ce = new SqlParameter("@Email", SqlDbType.VarChar, 50);
+            ce.Value = ocr.Email;
+            cmd.Parameters.Add(ce);
+
+
+            SqlParameter cm = new SqlParameter("@Mobilenumber", SqlDbType.VarChar, 20);
+            cm.Value = ocr.Mobilenumber;
+            cmd.Parameters.Add(cm);
+
+            SqlParameter q1 = new SqlParameter("@Password", SqlDbType.VarChar, 50);
+            q1.Value = ocr.Password;
+            cmd.Parameters.Add(q1);
+
+            SqlParameter v = new SqlParameter("@Firstname", SqlDbType.VarChar, 50);
+            v.Value = ocr.Firstname;
+            cmd.Parameters.Add(v);
+
+            SqlParameter v1 = new SqlParameter("@lastname", SqlDbType.VarChar, 50);
+            v1.Value = ocr.lastname;
+            cmd.Parameters.Add(v1);
+
+            SqlParameter v2 = new SqlParameter("@AuthTypeId", SqlDbType.VarChar, 50);
+            v2.Value = ocr.AuthTypeId;
+            cmd.Parameters.Add(v2);
+
+            SqlParameter u = new SqlParameter("@AltPhonenumber", SqlDbType.VarChar, 50);
+            u.Value = ocr.AltPhonenumber;
+            cmd.Parameters.Add(u);
+
+            SqlParameter u1 = new SqlParameter("@Altemail", SqlDbType.VarChar, 50);
+            u1.Value = ocr.Altemail;
+            cmd.Parameters.Add(u1);
+
+            SqlParameter i = new SqlParameter("@AccountNo", SqlDbType.VarChar, 50);
+            i.Value = ocr.AccountNo;
+            cmd.Parameters.Add(i);
+
+            SqlParameter y = new SqlParameter("@FCMId", SqlDbType.VarChar, 200);
+            y.Value = ocr.FCMId;
+            cmd.Parameters.Add(y);
+
+            SqlParameter z = new SqlParameter("@GroupId", SqlDbType.Int);
+            z.Value = ocr.GroupId;
+            cmd.Parameters.Add(z);
+
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            //[Mobileotp] ,[Emailotp]
+            //send email otp\
+
+
+            //send mobile otp as SMS
+
+
+            //status = 1;
+            //return status;
+            return dt;
+        }
+
+        //Sheshu Updated End
+
+        //Existing GroupId Sheshu Updated Start
+        [HttpPost]
+        [Route("api/UserAccount/RegisterUserForExistingGroupId")]
+        public DataTable RegisterUserForExistGroupId(UserAccount ocr)
+        {
+
+            SqlConnection conn = new SqlConnection();
+
+            conn.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["TDA"].ToString();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "InsUpdAppusers_For_Exist_GroupId";
+
+            cmd.Connection = conn;
+
+            SqlParameter f = new SqlParameter("@flag", SqlDbType.VarChar);
+            f.Value = ocr.flag;
+            cmd.Parameters.Add(f);
+
+            SqlParameter c = new SqlParameter("@Username", SqlDbType.VarChar, 20);
+            c.Value = ocr.Username;
+            cmd.Parameters.Add(c);
+
+            SqlParameter ce = new SqlParameter("@Email", SqlDbType.VarChar, 50);
+            ce.Value = ocr.Email;
+            cmd.Parameters.Add(ce);
+
+
+            SqlParameter cm = new SqlParameter("@Mobilenumber", SqlDbType.VarChar, 20);
+            cm.Value = ocr.Mobilenumber;
+            cmd.Parameters.Add(cm);
+
+            SqlParameter q1 = new SqlParameter("@Password", SqlDbType.VarChar, 50);
+            q1.Value = ocr.Password;
+            cmd.Parameters.Add(q1);
+
+            SqlParameter v = new SqlParameter("@Firstname", SqlDbType.VarChar, 50);
+            v.Value = ocr.Firstname;
+            cmd.Parameters.Add(v);
+
+            SqlParameter v1 = new SqlParameter("@lastname", SqlDbType.VarChar, 50);
+            v1.Value = ocr.lastname;
+            cmd.Parameters.Add(v1);
+
+            SqlParameter v2 = new SqlParameter("@AuthTypeId", SqlDbType.VarChar, 50);
+            v2.Value = ocr.AuthTypeId;
+            cmd.Parameters.Add(v2);
+
+            SqlParameter u = new SqlParameter("@AltPhonenumber", SqlDbType.VarChar, 50);
+            u.Value = ocr.AltPhonenumber;
+            cmd.Parameters.Add(u);
+
+            SqlParameter u1 = new SqlParameter("@Altemail", SqlDbType.VarChar, 50);
+            u1.Value = ocr.Altemail;
+            cmd.Parameters.Add(u1);
+
+            SqlParameter i = new SqlParameter("@AccountNo", SqlDbType.VarChar, 50);
+            i.Value = ocr.AccountNo;
+            cmd.Parameters.Add(i);
+
+            SqlParameter y = new SqlParameter("@FCMId", SqlDbType.VarChar, 200);
+            y.Value = ocr.FCMId;
+            cmd.Parameters.Add(y);
+
+            SqlParameter z = new SqlParameter("@GroupId", SqlDbType.Int);
+            z.Value = ocr.GroupId;
+            cmd.Parameters.Add(z);
+
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+
+
+
+            //status = 1;
+            //return status;
+            return dt;
+        }
+
+        //Existing GroupId Sheshu Updated End
+
+
         [HttpPost]
         [Route("api/UserAccount/RegisterUser")]
-        public int RegisterUser(UserAccount ocr)
+        public DataTable RegisterUser(UserAccount ocr)
         {
-            int status = 0;
+            
             SqlConnection conn = new SqlConnection();
 
             conn.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["TDA"].ToString();
@@ -50,7 +220,7 @@ namespace TrackDear.Controllers
             q1.Value = ocr.Password;
             cmd.Parameters.Add(q1);
 
-          SqlParameter v = new SqlParameter("@Firstname", SqlDbType.VarChar, 50);
+            SqlParameter v = new SqlParameter("@Firstname", SqlDbType.VarChar, 50);
             v.Value = ocr.Firstname;
             cmd.Parameters.Add(v);
 
@@ -75,7 +245,15 @@ namespace TrackDear.Controllers
             SqlParameter i = new SqlParameter("@AccountNo", SqlDbType.VarChar, 50);
             i.Value = ocr.AccountNo;
             cmd.Parameters.Add(i);
-                       
+
+            SqlParameter y = new SqlParameter("@FCMId", SqlDbType.VarChar, 200);
+            y.Value = ocr.FCMId;
+            cmd.Parameters.Add(y);
+
+            SqlParameter z = new SqlParameter("@GroupId", SqlDbType.Int);
+            z.Value = ocr.GroupId;
+            cmd.Parameters.Add(z);
+            
 
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -148,7 +326,7 @@ namespace TrackDear.Controllers
                 }
                 catch (Exception ex)
                 {
-                    status = 0;
+                    //status = 0;
                     //throw ex;
                 }
 
@@ -226,14 +404,15 @@ namespace TrackDear.Controllers
                 }
                 catch (Exception ex)
                 {
-                    status = 0;
+                    //status = 0;
                     //throw ex;
                 }
             }
             #endregion Mobile OTP
 
-            status = 1;
-            return status;
+            //status = 1;
+            //return status;
+            return dt;
         }
 
         

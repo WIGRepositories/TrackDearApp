@@ -272,7 +272,7 @@
                     <div class="modal-content">
                         <div class="modal-header modal-header-primary">
                             <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
-                            <h4 id="modal-header-primary-label" class="modal-title">Add User</h4>
+                            <h4 id="modal-header-primary-label" class="modal-title">Register User</h4>
                         </div>
                         <div class="modal-body">
                             <div class="row mbm">
@@ -290,7 +290,7 @@
                                     <div class="form-group">
                                         <label for="Description" class="control-label" style="color:red;">First Name:<span class='require'>*</span></label>
                                         <div>
-                                            <input id="inputJobID" type="text" ng-model="NewUser.FirstName" class="form-control" /><span class="help-block"></span>
+                                            <input id="inputJobID" type="text" ng-model="NewUser.Firstname" class="form-control" /><span class="help-block"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -298,7 +298,7 @@
                                     <div class="form-group">
                                         <label for="Description" class="control-label" style="color:red;">Last Name:<span class='require'>*</span></label>
                                         <div>
-                                            <input id="inputJobID" type="text" ng-model="NewUser.LastName" class="form-control" /><span class="help-block"></span>
+                                            <input id="inputJobID" type="text" ng-model="NewUser.lastname" class="form-control" /><span class="help-block"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -340,17 +340,17 @@
                             </div>
                             <div class="row mbm">
 
-                                <div class="col-md-4">
+                                <!--<div class="col-md-4">
                                     <label for="selCountry" class=" control-label">Gender:</label>
                                     <div>
                                         <select ng-model="User1.Gender" ng-value="NewUser.GenderId" style="width:100%">
                                             <option value="">Select Gender</option>
                                             <option value="26">Male</option>
-                                            <option value="27">Female</option>
+                                            <option value="27">Female</option>-->
                                             <!--<option value="28">Others</option>-->
-                                        </select>
+                                        <!--</select>
                                     </div>
-                                </div>
+                                </div>-->
                                 <div class="col-md-4">
                                     <label for="Description" class=" control-label">Mobilenumber:</label>
                                     <div>
@@ -380,9 +380,17 @@
                                 <div class="col-md-4">
                                     <label for="Description" class=" control-label">AuthTypeId:</label>
                                     <div>
-                                        <input id="AuthTypeId" type="text" ng-keypress="filterValue($event)" ng-model="NewUser.AuthTypeId" class="form-control" maxlength="15" /> <span class="help-block"></span>
+                                        <input id="AuthTypeId" type="text" ng-keypress="filterValue($event)" ng-model="NewUser.AuthTypeId" class="form-control" maxlength="50" /> <span class="help-block"></span>
                                     </div>
                                 </div>
+                                <div class="col-md-4">
+                                    <label for="Description" class=" control-label">FCMId:</label>
+                                    <div>
+                                        <input id="FCMid" type="text" ng-keypress="filterValue($event)" ng-model="NewUser.FCMid" class="form-control" maxlength="50" /> <span class="help-block"></span>
+                                    </div>
+                                </div>
+
+
 
 
                             </div>
@@ -390,7 +398,7 @@
                             <div class="form-actions">
                                 <div style="text-align:center">
                                     <!--<button class="btn btn-green" data-dismiss="modal" type="button" ng-click="save(NewUser, 'I',null,$event);" ng-disabled="isSuperUser == 0">Save</button>-->
-                                    <button class="btn btn-green" data-dismiss="modal" type="button" ng-click="save(NewUser, 'I',null,$event);">Save</button>
+                                    <button class="btn btn-green" data-dismiss="modal" type="button" ng-click="save(NewUser,'I')">Save</button>
                                     &nbsp;
                                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
                                 </div>
@@ -423,41 +431,42 @@
         </div>
 
 
+        <script src="../Scripts/UsersList.js"></script>
 
-
-
-
-        <script src="js/jquery-1.10.2.min.js"></script>
-        <script src="js/jquery-migrate-1.2.1.min.js"></script>
-        <script src="js/jquery-ui.js"></script>
+        <script src="../Scripts/jquery-1.10.2.min.js"></script>
+        <script src="../Scripts/jquery-migrate-1.2.1.min.js"></script>
+        <script src="../Scripts/jquery-ui.js"></script>
         <!--loading bootstrap js-->
-        <script src="vendors/bootstrap/js/bootstrap.js"></script>
-        <script src="vendors/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js"></script>
+        <script src="../Scripts/Vendor/bootstrap.js"></script>
+        <script src="../Scripts/Vendor/bootstrap-hover-dropdown.js"></script>
 
-
-        <script src="vendors/metisMenu/jquery.metisMenu.js"></script>
-        <script src="vendors/slimScroll/jquery.slimscroll.js"></script>
-        <script src="vendors/jquery-cookie/jquery.cookie.js"></script>
-        <script src="vendors/iCheck/icheck.min.js"></script>
-        <script src="vendors/iCheck/custom.min.js"></script>
-        <script src="vendors/jquery-news-ticker/jquery.news-ticker.js"></script>
-        <script src="js/jquery.menu.js"></script>
-        <script src="vendors/jquery-pace/pace.min.js"></script>
-        <script src="vendors/holder/holder.js"></script>
-        <script src="vendors/responsive-tabs/responsive-tabs.js"></script>
+        <script src="../Scripts/Vendor/jquery.metisMenu.js"></script>
+        <script src="../Scripts/Vendor/jquery.slimscroll.js"></script>
+        <script src="../Scripts/Vendor/jquery.cookie.js"></script>
+        <script src="../Scripts/Vendor/icheck.min.js"></script>
+        <script src="../Scripts/Vendor/custom.min.js"></script>
+        <!--<script src="../Scripts/Vendor/jquery.news-ticker.js"></script>-->
+        <script src="../Scripts/jquery.menu.js"></script>
+        <script src="../Scripts/Vendor/pace.min.js"></script>
+        <script src="../Scripts/Vendor/holder.js"></script>
+        <script src="../Scripts/Vendor/responsive-tabs.js"></script>
         <!--LOADING SCRIPTS FOR PAGE-->
-        <script src="js/table-action.js"></script>
+        <script src="../Scripts/table-action.js"></script>
         <!--CORE JAVASCRIPT-->
-        <script src="js/main.js"></script>
-        <script src="js/angular.js"></script>
-        <script src="js/ui-bootstrap-tpls-1.3.3.js"></script>
-        <script src="js/ngStorage.js"></script>
-        <script src="js/fileupload/angular-file-upload.js"></script>
-        <script src="js/fileupload/angular-file-upload-shim.js"></script>
+
+        <script src="../Scripts/main.js"></script>
+        <script src="../Scripts/angular.js"></script>
+        <script src="../Scripts/ui-bootstrap-tpls-1.3.3.js"></script>
+        <script src="../Scripts/ngStorage.js"></script>
+
+        <!--<script src="js/fileupload/angular-file-upload.js"></script>
+        <script src="js/fileupload/angular-file-upload-shim.js"></script>-->
+
         <script src="../Scripts/appUser.js"></script>
+        
         <!--<script src="js/Users.js"></script>-->
 
-        <script src="js/fileupload/Upload.js"></script>
+        <!--<script src="js/fileupload/Upload.js"></script>-->
 
 </body>
 
