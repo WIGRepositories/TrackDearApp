@@ -10,7 +10,7 @@ var mycrtl1 = myapp1.controller('myCtrl', function ($scope, $http) {
     };
 
     $scope.save = function (NewUser) {
-
+        
         var NewUser = {
             flag: 'I',
             Username: NewUser.Username,

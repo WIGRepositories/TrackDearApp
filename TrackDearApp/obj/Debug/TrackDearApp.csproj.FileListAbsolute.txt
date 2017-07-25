@@ -9,6 +9,6 @@ D:\Projects\TrackDearApp\TrackDearApp\bin\Newtonsoft.Json.xml
 D:\Projects\TrackDearApp\TrackDearApp\bin\System.Net.Http.Formatting.xml
 D:\Projects\TrackDearApp\TrackDearApp\bin\System.Web.Http.xml
 D:\Projects\TrackDearApp\TrackDearApp\bin\System.Web.Http.WebHost.xml
+D:\Projects\TrackDearApp\TrackDearApp\obj\Debug\TrackDearApp.csprojResolveAssemblyReference.cache
 D:\Projects\TrackDearApp\TrackDearApp\obj\Debug\TrackDearApp.dll
 D:\Projects\TrackDearApp\TrackDearApp\obj\Debug\TrackDearApp.pdb
-D:\Projects\TrackDearApp\TrackDearApp\obj\Debug\TrackDearApp.csprojResolveAssemblyReference.cache

@@ -8,7 +8,7 @@
     var uuid = 0,
         runiqueId = /^ui-id-\d+$/;
 
-// $.ui might exist from components with no dependencies, e.g., $.ui.position
+    // $.ui might exist from components with no dependencies, e.g., $.ui.position
     $.ui = $.ui || {};
 
     $.extend($.ui, {
@@ -40,7 +40,7 @@
         }
     });
 
-// plugins
+    // plugins
     $.fn.extend({
         focus: (function (orig) {
             return function (delay, fn) {
@@ -79,8 +79,8 @@
             }
 
             if (this.length) {
-                var elem = $(this[ 0 ]), position, value;
-                while (elem.length && elem[ 0 ] !== document) {
+                var elem = $(this[0]), position, value;
+                while (elem.length && elem[0] !== document) {
                     // Ignore z-index if position is set to a value where z-index is ignored by the browser
                     // This makes behavior of this function consistent across browsers
                     // WebKit always returns auto if the element is positioned
@@ -119,7 +119,7 @@
         }
     });
 
-// selectors
+    // selectors
     function focusable(element, isTabIndexNotNaN) {
         var map, mapName, img,
             nodeName = element.nodeName.toLowerCase();
@@ -132,7 +132,7 @@
             img = $("img[usemap=#" + mapName + "]")[0];
             return !!img && visible(img);
         }
-        return ( /input|select|textarea|button|object/.test(nodeName) ?
+        return (/input|select|textarea|button|object/.test(nodeName) ?
             !element.disabled :
                 "a" === nodeName ?
             element.href || isTabIndexNotNaN :
@@ -147,7 +147,7 @@
         }).length;
     }
 
-    $.extend($.expr[ ":" ], {
+    $.extend($.expr[":"], {
         data: $.expr.createPseudo ?
             $.expr.createPseudo(function (dataName) {
                 return function (elem) {
@@ -156,7 +156,7 @@
             }) :
             // support: jQuery <1.8
             function (elem, i, match) {
-                return !!$.data(elem, match[ 3 ]);
+                return !!$.data(elem, match[3]);
             },
 
         focusable: function (element) {
@@ -166,14 +166,14 @@
         tabbable: function (element) {
             var tabIndex = $.attr(element, "tabindex"),
                 isTabIndexNaN = isNaN(tabIndex);
-            return ( isTabIndexNaN || tabIndex >= 0 ) && focusable(element, !isTabIndexNaN);
+            return (isTabIndexNaN || tabIndex >= 0) && focusable(element, !isTabIndexNaN);
         }
     });
 
-// support: jQuery <1.8
+    // support: jQuery <1.8
     if (!$("<a>").outerWidth(1).jquery) {
-        $.each([ "Width", "Height" ], function (i, name) {
-            var side = name === "Width" ? [ "Left", "Right" ] : [ "Top", "Bottom" ],
+        $.each(["Width", "Height"], function (i, name) {
+            var side = name === "Width" ? ["Left", "Right"] : ["Top", "Bottom"],
                 type = name.toLowerCase(),
                 orig = {
                     innerWidth: $.fn.innerWidth,
@@ -195,9 +195,9 @@
                 return size;
             }
 
-            $.fn[ "inner" + name ] = function (size) {
+            $.fn["inner" + name] = function (size) {
                 if (size === undefined) {
-                    return orig[ "inner" + name ].call(this);
+                    return orig["inner" + name].call(this);
                 }
 
                 return this.each(function () {
@@ -205,9 +205,9 @@
                 });
             };
 
-            $.fn[ "outer" + name] = function (size, margin) {
+            $.fn["outer" + name] = function (size, margin) {
                 if (typeof size !== "number") {
-                    return orig[ "outer" + name ].call(this, size);
+                    return orig["outer" + name].call(this, size);
                 }
 
                 return this.each(function () {
@@ -217,7 +217,7 @@
         });
     }
 
-// support: jQuery <1.8
+    // support: jQuery <1.8
     if (!$.fn.addBack) {
         $.fn.addBack = function (selector) {
             return this.add(selector == null ?
@@ -226,7 +226,7 @@
         };
     }
 
-// support: jQuery 1.6.1, 1.6.2 (http://bugs.jquery.com/ticket/9413)
+    // support: jQuery 1.6.1, 1.6.2 (http://bugs.jquery.com/ticket/9413)
     if ($("<a>").data("a-b", "a").removeData("a-b").data("a-b")) {
         $.fn.removeData = (function (removeData) {
             return function (key) {
@@ -240,16 +240,16 @@
     }
 
 
-// deprecated
+    // deprecated
     $.ui.ie = !!/msie [\w.]+/.exec(navigator.userAgent.toLowerCase());
 
     $.support.selectstart = "onselectstart" in document.createElement("div");
     $.fn.extend({
         disableSelection: function () {
-            return this.bind(( $.support.selectstart ? "selectstart" : "mousedown" ) +
+            return this.bind(($.support.selectstart ? "selectstart" : "mousedown") +
                 ".ui-disableSelection", function (event) {
-                event.preventDefault();
-            });
+                    event.preventDefault();
+                });
         },
 
         enableSelection: function () {
@@ -262,22 +262,22 @@
         plugin: {
             add: function (module, option, set) {
                 var i,
-                    proto = $.ui[ module ].prototype;
+                    proto = $.ui[module].prototype;
                 for (i in set) {
-                    proto.plugins[ i ] = proto.plugins[ i ] || [];
-                    proto.plugins[ i ].push([ option, set[ i ] ]);
+                    proto.plugins[i] = proto.plugins[i] || [];
+                    proto.plugins[i].push([option, set[i]]);
                 }
             },
             call: function (instance, name, args) {
                 var i,
-                    set = instance.plugins[ name ];
-                if (!set || !instance.element[ 0 ].parentNode || instance.element[ 0 ].parentNode.nodeType === 11) {
+                    set = instance.plugins[name];
+                if (!set || !instance.element[0].parentNode || instance.element[0].parentNode.nodeType === 11) {
                     return;
                 }
 
                 for (i = 0; i < set.length; i++) {
-                    if (instance.options[ set[ i ][ 0 ] ]) {
-                        set[ i ][ 1 ].apply(instance.element, args);
+                    if (instance.options[set[i][0]]) {
+                        set[i][1].apply(instance.element, args);
                     }
                 }
             }
@@ -291,24 +291,23 @@
                 return false;
             }
 
-            var scroll = ( a && a === "left" ) ? "scrollLeft" : "scrollTop",
+            var scroll = (a && a === "left") ? "scrollLeft" : "scrollTop",
                 has = false;
 
-            if (el[ scroll ] > 0) {
+            if (el[scroll] > 0) {
                 return true;
             }
 
             // TODO: determine which cases actually cause this to happen
             // if the element doesn't have the scroll set, see if it's possible to
             // set the scroll
-            el[ scroll ] = 1;
-            has = ( el[ scroll ] > 0 );
-            el[ scroll ] = 0;
+            el[scroll] = 1;
+            has = (el[scroll] > 0);
+            el[scroll] = 0;
             return has;
         }
     });
-
-})(jQuery);
+}(jQuery));
 (function ($, undefined) {
 
     var uuid = 0,
@@ -1476,7 +1475,7 @@
         testElementParent.removeChild(testElement);
     })();
 
-}(jQuery) );
+}(jQuery));
 (function ($, undefined) {
 
     var uid = 0,

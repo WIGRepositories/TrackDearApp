@@ -80,8 +80,10 @@
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-route.js" />
     <Content Include="Scripts\angular-ui-router.js" />
+    <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\appUser.js" />
     <Content Include="Scripts\charts-highchart-line.js" />
+    <Content Include="Scripts\GoogleMap1.js" />
     <Content Include="Scripts\index.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\jquery-migrate-1.2.1.min.js" />
@@ -89,6 +91,7 @@
     <Content Include="Scripts\jquery.menu.js" />
     <Content Include="Scripts\Login.js" />
     <Content Include="Scripts\main.js" />
+    <Content Include="Scripts\Map.js" />
     <Content Include="Scripts\ngStorage.js" />
     <Content Include="Scripts\ocLazyLoad.js" />
     <Content Include="Scripts\source.js" />
@@ -112,9 +115,12 @@
     <Content Include="Scripts\Vendor\responsive-tabs.js" />
     <Content Include="UI\AddNewUser.html" />
     <Content Include="UI\AppUser.html" />
+    <Content Include="UI\css\style.css" />
     <Content Include="UI\EditHistory.html" />
     <Content Include="UI\FAQs.html" />
     <Content Include="UI\ForgotPassword.html" />
+    <Content Include="UI\GetLocation.html" />
+    <Content Include="UI\GoogleMap1.html" />
     <Content Include="UI\images\11.jpg" />
     <Content Include="UI\images\12.png" />
     <Content Include="UI\images\13.jpg" />
@@ -169,7 +175,6 @@
     <Content Include="UI\LicenseTypes.html" />
     <Content Include="UI\Login.html" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\angular.js" />
     <Content Include="UI\css\bootstrap.min.css" />
     <Content Include="UI\css\handsontable.full.min.css" />
     <Content Include="UI\css\style-responsive.css" />
@@ -1942,7 +1947,7 @@
     <Content Include="UI\vendors\moment\readme.md" />
     <Content Include="UI\vendors\slimScroll\README.md" />
     <Content Include="UI\vendors\slimScroll\slimScroll.jquery.json" />
-    <None Include="Properties\PublishProfiles\TrackDear.pubxml" />
+    <Content Include="UI\css\style.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1952,6 +1957,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Properties\PublishProfiles\" />
     <Folder Include="UI\images\avatar\" />
     <Folder Include="UI\vendors\bootstrap-datetimepicker\bootstrap\" />
     <Folder Include="UI\vendors\css3-treeview\" />

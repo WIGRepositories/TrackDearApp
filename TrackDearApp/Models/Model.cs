@@ -37,7 +37,16 @@ namespace TrackDearApp
 
         public string noofattempts { get; set; }
     }
+    public class UserLogin
+    {
+        public int Id { set; get; }
+        public int UserId { set; get; }
+        public string LoginInfo { set; get; }
+        public string Passkey { set; get; }
+        public string Salt { set; get; }
+        public string Active { set; get; }
 
+    }
     public class UserAccount
     {
 
@@ -112,7 +121,7 @@ namespace TrackDearApp
         public DateTime Mobileotpsenton { get; set; }
         public DateTime emailotpsenton { get; set; }
         public int noofattempts { get; set; }
-
+        
     }
 
     public class Location

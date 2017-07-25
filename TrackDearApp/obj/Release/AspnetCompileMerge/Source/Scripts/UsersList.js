@@ -22,8 +22,8 @@ var mycrtl1 = myapp1.controller('myCtrl', function ($scope, $http) {
             AuthTypeId: NewUser.AuthTypeId,
             AltPhonenumber: NewUser.AltPhonenumber,
             Altemail: NewUser.Altemail,
-            AccountNo: NewUser.AccountNo
-
+            FCMId: NewUser.FCMid,
+            AccountNo: NewUser.AccountNo            
         };
         var req = {
             method: 'POST',

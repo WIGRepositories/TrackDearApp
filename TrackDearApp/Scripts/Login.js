@@ -40,28 +40,31 @@ var myCtrl = myapp1.controller('myCtrl', function ($scope, $http, $localStorage,
 
     $scope.Signin = function () {
 
-        var u = $scope.UserName;
-        var p = $scope.Password
+        //var u = $scope.LoginInfo;
+        //var p = $scope.passkey
 
-        if (u == null || u == "") {
-            $scope.showDialog("Please enter username");
-            // alert('Please enter username');
-            return;
+        //if (u == null || u == "") {
+        //    $scope.showDialog("Please enter username");
+        //    // alert('Please enter username');
+        //    return;
+        //}
+
+        //if (p == null || p == "") {
+        //    $scope.showDialog("Please enter password");
+        //    //alert('Please enter password');
+        //    return;
+        //}
+        
+        var inputcred = {
+            logininfo: UserName,
+            Passkey: Password
         }
-
-        if (p == null || p == "") {
-            $scope.showDialog("Please enter password");
-            //alert('Please enter password');
-            return;
-        }
-
-        var inputcred = { LoginInfo: u, Passkey: p }
 
 
         var req = {
             method: 'POST',
-            url: '/api/Login/ValidateCredentials',
-            data: inputcred
+            url: '/api/Login/ValidateCredentialsFinal',
+            data:inputcred
         }
         $rootScope.spinner.on();
         //  angular.element('body').addClass('spinnerOn'); // add Class to body to show spinner

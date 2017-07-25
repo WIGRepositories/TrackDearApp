@@ -11,3 +11,4 @@ D:\Projects\TrackDearApp\TrackDearApp\bin\System.Web.Http.xml
 D:\Projects\TrackDearApp\TrackDearApp\bin\System.Web.Http.WebHost.xml
 D:\Projects\TrackDearApp\TrackDearApp\obj\Release\TrackDearApp.dll
 D:\Projects\TrackDearApp\TrackDearApp\obj\Release\TrackDearApp.pdb
+D:\Projects\TrackDearApp\TrackDearApp\obj\Release\TrackDearApp.csprojResolveAssemblyReference.cache

@@ -2,8 +2,7 @@
 1>D:\Projects\TrackDearApp\TrackDearApp\Controllers\AddUsersController.cs(134,34,134,36): warning CS0168: The variable 'ex' is declared but never used
 1>D:\Projects\TrackDearApp\TrackDearApp\Controllers\AddUsersController.cs(212,34,212,36): warning CS0168: The variable 'ex' is declared but never used
 1>D:\Projects\TrackDearApp\TrackDearApp\Controllers\ForgotPasswordController.cs(112,34,112,36): warning CS0168: The variable 'ex' is declared but never used
-1>D:\Projects\TrackDearApp\TrackDearApp\Controllers\RegisterUserController.cs(152,34,152,36): warning CS0168: The variable 'ex' is declared but never used
-1>D:\Projects\TrackDearApp\TrackDearApp\Controllers\RegisterUserController.cs(230,34,230,36): warning CS0168: The variable 'ex' is declared but never used
-1>D:\Projects\TrackDearApp\TrackDearApp\Controllers\RegisterUserController.cs(439,34,439,36): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Projects\TrackDearApp\TrackDearApp\Controllers\RegisterUserController.cs(327,34,327,36): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Projects\TrackDearApp\TrackDearApp\Controllers\RegisterUserController.cs(405,34,405,36): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Projects\TrackDearApp\TrackDearApp\Controllers\RegisterUserController.cs(615,34,615,36): warning CS0168: The variable 'ex' is declared but never used
 1>  TrackDearApp -> D:\Projects\TrackDearApp\TrackDearApp\bin\TrackDearApp.dll
-========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
