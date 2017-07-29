@@ -219,5 +219,109 @@ namespace TrackDearApp.Controllers
             return (dt);
             //Verify Emailotp
         }
+
+
+
+
+
+
+        [HttpGet]
+        [Route("api/Tracking/TrackingSample")]
+        public DataTable TrackingSample()
+        {
+            DataTable Tbl = new DataTable();
+            SqlConnection conn = new SqlConnection();
+            conn.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["TDA"].ToString(); ;
+
+            SqlCommand cmd = new SqlCommand();
+
+
+            cmd.CommandText = "ForTrackingSample";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = conn;
+
+
+            //cmd.CommandType = CommandType.StoredProcedure;
+
+
+
+            //SqlParameter m = new SqlParameter("@Mobilenumber", SqlDbType.VarChar, 50);
+            //m.Value = ocr.Mobilenumber;
+            //cmd.Parameters.Add(m);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(Tbl);
+
+            return Tbl;
+        }
+
+
+
+        [HttpGet]
+        [Route("api/Tracking/ForMarkerInfoId")]
+        public DataTable ForMarkerInfoId(int LocationId)
+        {
+            DataTable Tbl2 = new DataTable();
+            SqlConnection conn = new SqlConnection();
+            conn.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["TDA"].ToString(); ;
+
+            SqlCommand cmd = new SqlCommand();
+
+
+            cmd.CommandText = "ForMarkerInfo";
+            cmd.CommandType = CommandType.StoredProcedure;
+            //cmd.Parameters.Add("@LocationId", SqlDbType.Int).Value = LocationId;
+
+            cmd.Connection = conn;
+            SqlParameter q1 = new SqlParameter("@LocationId", SqlDbType.Int);
+            q1.Value = LocationId;
+            cmd.Parameters.Add(q1);
+
+            //cmd.CommandType = CommandType.StoredProcedure;
+
+
+
+            //SqlParameter m = new SqlParameter("@Mobilenumber", SqlDbType.VarChar, 50);
+            //m.Value = ocr.Mobilenumber;
+            //cmd.Parameters.Add(m);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(Tbl2);
+
+            return Tbl2;
+        }
+
+        [HttpPost]
+        [Route("api/Tracking/PostGoogleLatLng")]
+
+        public HttpResponseMessage PostGoogleLatLng(AddingNewUser l)
+        {
+            SqlConnection con = new SqlConnection();
+
+            con.ConnectionString = ConfigurationManager.ConnectionStrings["TDA"].ToString();
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "ForTrackingSampleInsUpd";
+            cmd.Connection = con;
+            con.Open();
+
+
+
+            SqlParameter Latitude = new SqlParameter("@Latitude", SqlDbType.Float);
+            Latitude.Value = l.latitude;
+            cmd.Parameters.Add(Latitude);
+
+            SqlParameter Longitude = new SqlParameter("@Longitude", SqlDbType.Float);
+            Longitude.Value = l.longitude;
+            cmd.Parameters.Add(Longitude);
+
+            SqlParameter d = new SqlParameter("@flag", SqlDbType.VarChar);
+            d.Value = l.flag;
+            cmd.Parameters.Add(d);
+
+            cmd.ExecuteNonQuery();
+            con.Close();
+            return new HttpResponseMessage(HttpStatusCode.OK);
+        }
     }
 }

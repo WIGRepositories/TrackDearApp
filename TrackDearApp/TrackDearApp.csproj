@@ -76,14 +76,15 @@
   <ItemGroup>
     <Content Include="DBScript\TrackDearSPsScript.sql" />
     <Content Include="DBScript\TrackDearTablesScript.sql" />
+    <Content Include="GoogleMapForPostLoc.html" />
     <Content Include="Scripts\AddNewUser.js" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-route.js" />
     <Content Include="Scripts\angular-ui-router.js" />
-    <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\appUser.js" />
     <Content Include="Scripts\charts-highchart-line.js" />
-    <Content Include="Scripts\GoogleMap1.js" />
+    <Content Include="Scripts\GooglemapForPostLoc.js" />
+    <Content Include="Scripts\GoogleMap_On28th.js" />
     <Content Include="Scripts\index.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\jquery-migrate-1.2.1.min.js" />
@@ -94,6 +95,8 @@
     <Content Include="Scripts\Map.js" />
     <Content Include="Scripts\ngStorage.js" />
     <Content Include="Scripts\ocLazyLoad.js" />
+    <Content Include="Scripts\PostGoogleLatLong.js" />
+    <Content Include="Scripts\sample.js" />
     <Content Include="Scripts\source.js" />
     <Content Include="Scripts\table-action.js" />
     <Content Include="Scripts\treasure-overlay-spinner.js" />
@@ -115,12 +118,17 @@
     <Content Include="Scripts\Vendor\responsive-tabs.js" />
     <Content Include="UI\AddNewUser.html" />
     <Content Include="UI\AppUser.html" />
+    <Content Include="UI\css\GooglemapForPostLoc.css" />
+    <Content Include="UI\css\GoogleMap_On28th.css" />
+    <Content Include="UI\css\PostGoogleLatLong.css" />
     <Content Include="UI\css\style.css" />
     <Content Include="UI\EditHistory.html" />
     <Content Include="UI\FAQs.html" />
     <Content Include="UI\ForgotPassword.html" />
     <Content Include="UI\GetLocation.html" />
-    <Content Include="UI\GoogleMap1.html" />
+    <Content Include="UI\GoogleMap3.html" />
+    <Content Include="UI\GoogleMap4.html" />
+    <Content Include="UI\GoogleMap_On28th.html" />
     <Content Include="UI\images\11.jpg" />
     <Content Include="UI\images\12.png" />
     <Content Include="UI\images\13.jpg" />
@@ -185,9 +193,11 @@
     <Content Include="UI\PaymentConfirmation.html" />
     <Content Include="UI\PaymentGatewayConfiguration.html" />
     <Content Include="UI\paymentHistory.html" />
+    <Content Include="UI\PostGoogleLatLong.html" />
     <Content Include="UI\register.html" />
     <Content Include="UI\ResetPassword.html" />
     <Content Include="UI\Roles.html" />
+    <Content Include="UI\sample.html" />
     <Content Include="UI\TroubleTicketHistory.html" />
     <Content Include="UI\TroubleTicketingDetails.html" />
     <Content Include="UI\TroubleTicketReports.html" />

@@ -125,7 +125,7 @@ namespace TrackDear.Controllers
             c.Value = ocr.Username;
             cmd.Parameters.Add(c);
 
-            SqlParameter ce = new SqlParameter("@Email", SqlDbType.VarChar, 50);
+            SqlParameter ce = new SqlParameter("@Email", SqlDbType.Float, 50);
             ce.Value = ocr.Email;
             cmd.Parameters.Add(ce);
 

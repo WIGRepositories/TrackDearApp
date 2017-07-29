@@ -154,6 +154,7 @@ namespace TrackDearApp
         public float longitude { get; set; }
         public string flag { get; set; }
         public int status { get; set; }
+        public int LocationId { get; set; }
     }
 
     
