@@ -43,7 +43,6 @@ namespace TrackDear.Controllers
             ce.Value = ocr.Email;
             cmd.Parameters.Add(ce);
 
-
             SqlParameter cm = new SqlParameter("@Mobilenumber", SqlDbType.VarChar, 20);
             cm.Value = ocr.Mobilenumber;
             cmd.Parameters.Add(cm);

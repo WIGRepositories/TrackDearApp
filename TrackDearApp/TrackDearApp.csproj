@@ -83,6 +83,7 @@
     <Content Include="Scripts\angular-ui-router.js" />
     <Content Include="Scripts\appUser.js" />
     <Content Include="Scripts\charts-highchart-line.js" />
+    <Content Include="Scripts\DistanceBetween2Loc.js" />
     <Content Include="Scripts\GooglemapForPostLoc.js" />
     <Content Include="Scripts\GoogleMap_On28th.js" />
     <Content Include="Scripts\index.js" />
@@ -93,11 +94,13 @@
     <Content Include="Scripts\Login.js" />
     <Content Include="Scripts\main.js" />
     <Content Include="Scripts\Map.js" />
+    <Content Include="Scripts\MapPath.js" />
     <Content Include="Scripts\ngStorage.js" />
     <Content Include="Scripts\ocLazyLoad.js" />
     <Content Include="Scripts\PostGoogleLatLong.js" />
     <Content Include="Scripts\sample.js" />
     <Content Include="Scripts\source.js" />
+    <Content Include="Scripts\SourceDestiwithLine.js" />
     <Content Include="Scripts\table-action.js" />
     <Content Include="Scripts\treasure-overlay-spinner.js" />
     <Content Include="Scripts\ui-bootstrap-tpls-1.3.3.js" />
@@ -121,7 +124,9 @@
     <Content Include="UI\css\GooglemapForPostLoc.css" />
     <Content Include="UI\css\GoogleMap_On28th.css" />
     <Content Include="UI\css\PostGoogleLatLong.css" />
+    <Content Include="UI\css\SourceDestiwithLine.css" />
     <Content Include="UI\css\style.css" />
+    <Content Include="UI\DistanceBetween2Loc.html" />
     <Content Include="UI\EditHistory.html" />
     <Content Include="UI\FAQs.html" />
     <Content Include="UI\ForgotPassword.html" />
@@ -190,6 +195,7 @@
     <Content Include="UI\css\themes\style2\pink-violet.css" />
     <Content Include="UI\css\treasure-overlay-spinner.css" />
     <Content Include="UI\index.html" />
+    <Content Include="UI\MapPath.html" />
     <Content Include="UI\PaymentConfirmation.html" />
     <Content Include="UI\PaymentGatewayConfiguration.html" />
     <Content Include="UI\paymentHistory.html" />
@@ -198,6 +204,7 @@
     <Content Include="UI\ResetPassword.html" />
     <Content Include="UI\Roles.html" />
     <Content Include="UI\sample.html" />
+    <Content Include="UI\SourceDestiwithLine.html" />
     <Content Include="UI\TroubleTicketHistory.html" />
     <Content Include="UI\TroubleTicketingDetails.html" />
     <Content Include="UI\TroubleTicketReports.html" />
